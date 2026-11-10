@@ -72,11 +72,38 @@ body[data-l="3"] #hd,body[data-l="3"] #ck,body[data-l="3"] #cd,body[data-l="3"] 
 body[data-l="3"] #hd,body[data-l="3"] #ck{text-shadow:0 .3vh 1vh #000;background:linear-gradient(#000a,transparent);color:#fff}
 body[data-l="3"] .c{background:#000b;color:#fff}body[data-l="3"] .c.on{background:var(--a);color:var(--bg)}
 body[data-l="3"] .clock{font-size:11vh}
+
+.cards{grid-template-columns:repeat(9,1fr)}.c b{font-size:4.8vh}.c i{font-size:2.3vh}
+#ht{top:1vh;bottom:auto}
+#lv{grid-area:mb;display:none;width:100%;height:100%;border:0;border-radius:2vh;background:#000}
+body[data-live="1"] #lv{display:block}body[data-live="1"] #mb{display:none}
+#cn{grid-area:cn;display:none}.cn img,.cn video{object-fit:contain}.cn .hq{font-size:3vh}.cn .hs{font-size:2.4vh}
+body[data-l="7"]{grid-template-columns:1fr 31vw;grid-template-rows:auto auto 1fr auto auto;grid-template-areas:"hd hd" "mb ck" "mb cn" "cd cd" "mq mq"}
+body[data-l="8"]{grid-template-columns:21vw 1fr 27vw;grid-template-areas:"hd hd hd" "cd mb cn" "cd ck cn" "mq mq mq"}
+body[data-l="7"] #cn,body[data-l="8"] #cn{display:flex}
+body[data-l="7"] #an,body[data-l="8"] #an{display:block;width:16vh;height:16vh}
+body[data-l="7"] #ck>div,body[data-l="8"] #ck>div{display:flex;align-items:center;gap:1.2vw;flex-wrap:wrap;justify-content:center}
+body[data-l="7"] .clock,body[data-l="8"] .clock{font-size:8vh}
+body[data-l="7"] .nx,body[data-l="8"] .nx{margin:0}
+body[data-l="7"] .nx span,body[data-l="8"] .nx span{font-size:4.6vh}
+body[data-l="7"] .dt,body[data-l="8"] .dt{font-size:2.2vh}
+body[data-l="2"] #cd,body[data-l="4"] #cd,body[data-l="8"] #cd{grid-template-columns:1fr;margin:0;gap:.6vh}
+body[data-l="2"] .c,body[data-l="4"] .c,body[data-l="8"] .c{display:flex;justify-content:space-between;align-items:center;padding:.5vh 1.2vw}
+body[data-l="2"] .c i,body[data-l="4"] .c i,body[data-l="8"] .c i{font-size:2.6vh}
+body[data-l="2"] .c b,body[data-l="4"] .c b,body[data-l="8"] .c b{font-size:3.6vh}
+body[data-t="6"]{--bg:#050505;--b2:#1d1709;--a:#d4af37;--tx:#f8f1dc;--mut:#b9a778;--cd:#d4af3714;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2780%27%20height%3D%2780%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23d4af37%27%20stroke-opacity%3D%27.13%27%3E%3Crect%20x%3D%2718%27%20y%3D%2718%27%20width%3D%2744%27%20height%3D%2744%27/%3E%3Crect%20x%3D%2718%27%20y%3D%2718%27%20width%3D%2744%27%20height%3D%2744%27%20transform%3D%27rotate%2845%2040%2040%29%27/%3E%3C/g%3E%3C/svg%3E"),radial-gradient(ellipse at 50% 0,var(--b2),var(--bg) 72%)}
+body[data-t="7"]{--bg:#053d2c;--b2:#0f7a52;--a:#f1d98a;--tx:#fffaf0;--mut:#bfe3d2;--cd:#ffffff17;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2780%27%20height%3D%2780%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23f1d98a%27%20stroke-opacity%3D%27.13%27%3E%3Crect%20x%3D%2718%27%20y%3D%2718%27%20width%3D%2744%27%20height%3D%2744%27/%3E%3Crect%20x%3D%2718%27%20y%3D%2718%27%20width%3D%2744%27%20height%3D%2744%27%20transform%3D%27rotate%2845%2040%2040%29%27/%3E%3C/g%3E%3C/svg%3E"),radial-gradient(ellipse at 50% 0,var(--b2),var(--bg) 78%)}
+body[data-t="8"]{--bg:#0b1d3a;--b2:#22456f;--a:#ffd77a;--tx:#fff8e6;--mut:#aebfd6;--cd:#ffffff14;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2780%27%20height%3D%2780%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23ffd77a%27%20stroke-opacity%3D%27.13%27%3E%3Crect%20x%3D%2718%27%20y%3D%2718%27%20width%3D%2744%27%20height%3D%2744%27/%3E%3Crect%20x%3D%2718%27%20y%3D%2718%27%20width%3D%2744%27%20height%3D%2744%27%20transform%3D%27rotate%2845%2040%2040%29%27/%3E%3C/g%3E%3C/svg%3E"),linear-gradient(180deg,#0b1d3a 0%,#1f3f68 60%,#8a6a3a 130%)}
+body[data-t="6"] #hd,body[data-t="7"] #hd,body[data-t="8"] #hd{border-bottom:.3vh solid var(--a);padding-bottom:.8vh}
+body[data-t="6"] .clock,body[data-t="7"] .clock,body[data-t="8"] .clock{text-shadow:0 0 2vh var(--a)}
+#qrb{display:none;margin:1.5vh 0;text-align:center}#qr{background:#fff;image-rendering:pixelated;max-width:100%}#qt{font-size:2.2vh;color:#9ec5b7;margin-top:.8vh;word-break:break-all}
 </style></head><body data-t="1">
 <div class="hd" id="hd"><img id="lg" alt=""><div><div class="ar">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div><h1 id="nm"></h1><div class="sub" id="kt"></div></div></div>
 <div id="ck"><svg id="an" viewBox="-50 -50 100 100"></svg>
  <div><div class="clock" id="ck2"></div><div class="dt"><div id="gr"></div><div id="hj"></div></div><div class="nx"><b id="nn"></b><span id="nc"></span></div></div></div>
 <div class="mb" id="mb"></div>
+<iframe id="lv" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="mb cn" id="cn"></div>
 <div id="kh"></div>
 <div class="cards" id="cd"></div>
 <div class="mq"><span id="rt"></span></div>
@@ -85,36 +112,41 @@ body[data-l="3"] .clock{font-size:11vh}
 <div class="ov" id="sol"><h2>Sholat sedang berlangsung</h2><p>Mohon tenang dan non-aktifkan HP</p></div>
 
 <div id="set">
- <div id="pb"><h3>Masuk Admin</h3><label>PIN<input id="pi" type="password" placeholder="Masukkan PIN lalu tekan OK"></label><button id="bx">Batal</button></div>
+ <div id="pb"><h3>Masuk Admin</h3><label>PIN<input id="pi" type="password" placeholder="Masukkan PIN lalu tekan OK"></label><div id="qrb"><canvas id="qr"></canvas><div id="qt"></div></div><button id="bx">Batal</button></div>
  <div id="adm"><h3>Pengaturan Admin</h3><form id="fm" onsubmit="return false"></form>
   <h3>Upload File (tersimpan di browser perangkat ini)</h3>
-  <label>Adzan (audio)<input type="file" accept="audio/*" onchange="up(this,'adzan')"></label>
+  <label>Adzan pilihan 1 (audio)<input type="file" accept="audio/*" onchange="up(this,'adzan1')"></label>
+  <label>Adzan pilihan 2 (audio)<input type="file" accept="audio/*" onchange="up(this,'adzan2')"></label>
+  <label>Adzan pilihan 3 (audio)<input type="file" accept="audio/*" onchange="up(this,'adzan3')"></label>
   <label>Adzan Subuh (audio, opsional)<input type="file" accept="audio/*" onchange="up(this,'adzanS')"></label>
-  <label>Iqomah (audio)<input type="file" accept="audio/*" onchange="up(this,'iqomah')"></label>
+  <label>Iqomah pilihan 1 (audio)<input type="file" accept="audio/*" onchange="up(this,'iqomah1')"></label>
+  <label>Iqomah pilihan 2 (audio)<input type="file" accept="audio/*" onchange="up(this,'iqomah2')"></label>
+  <label>Iqomah pilihan 3 (audio)<input type="file" accept="audio/*" onchange="up(this,'iqomah3')"></label>
   <label>Gambar / Video (Ka'bah, Madinah, Arafah, kegiatan masjid)<input type="file" accept="image/*,video/*" multiple onchange="up(this,'media')"></label>
   <label>Logo masjid (gambar)<input type="file" accept="image/*" onchange="up(this,'logo')"></label>
   <div id="fl"></div>
-  <button id="bs">Simpan</button><button id="bt">Simulasi Adzan</button><button id="br">Reset Simulasi</button><button id="bf">Layar Penuh</button><button id="bc">Tutup</button></div>
+  <div id="sy"></div><button id="bs">Simpan</button><button id="bn">Sinkron Sekarang</button><button id="bu1">Uji Adzan</button><button id="bu2">Uji Iqomah</button><button id="bu3">Stop Suara</button><button id="bt">Simulasi Adzan</button><button id="br">Reset Simulasi</button><button id="bf">Layar Penuh</button><button id="bc">Tutup</button></div>
 </div>
 
 <script>
-const N=["Imsak","Subuh","Terbit","Dhuha","Dzuhur","Ashar","Maghrib","Isya"],MAIN=[1,4,5,6,7];
-const D={nama:"Masjid Hasanah Al Fatih",kota:"Bekasi, Jawa Barat",lat:-6.2383,lng:106.9756,tz:7,ih:2,hj:0,adz:4,solat:10,iq0:10,iq1:10,iq2:10,iq3:5,iq4:10,snm:"alert",tpl:0,lay:0,pin:"1234",almt:"",rek:"",khb:"",khi:"",khm:"",kht:"",kTgl:"",kSal:"",kIn:"",kOut:"",
+const N=["Imsak","Subuh","Terbit","Dhuha","Dzuhur","Ashar","Maghrib","Isya","Isyroq"],MAIN=[1,4,5,6,7],NX=[1,8,4,5,6,7],DO=[0,1,2,8,3,4,5,6,7];
+const D={nama:"Masjid Hasanah Al Fatih",kota:"Bekasi, Jawa Barat",lat:-6.2383,lng:106.9756,tz:7,ih:2,hj:0,adz:4,solat:10,iq0:10,iq1:10,iq2:10,iq3:5,iq4:10,snm:"alert",tpl:0,lay:0,pin:"1234",sheet:"",sync:5,clk:0,isy:10,isyd:1,live:1,chan:"UCos52azQNBgW63_9uDJoPDA",lmute:1,sa:1,si:1,tone:1,k8:0,almt:"",rek:"",khb:"",khi:"",khm:"",kht:"",kTgl:"",kSal:"",kIn:"",kOut:"",
 k0:0,k1:0,k2:0,k3:0,k4:0,k5:0,k6:0,k7:0,urls:"",
 hadits:"Sesungguhnya setiap amal tergantung pada niatnya. | HR. Bukhari dan Muslim\nBersuci itu separuh dari iman. | HR. Muslim\nSebaik-baik kalian adalah yang mempelajari Al-Qur'an dan mengajarkannya. | HR. Bukhari\nSholat berjamaah lebih utama daripada sholat sendirian dengan dua puluh tujuh derajat. | HR. Bukhari dan Muslim\nSenyummu di hadapan saudaramu adalah sedekah. | HR. Tirmidzi\nBarangsiapa beriman kepada Allah dan hari akhir, hendaklah berkata baik atau diam. | HR. Bukhari dan Muslim\nSesungguhnya bersama kesulitan ada kemudahan. | QS. Al-Insyirah: 6\nSesungguhnya Allah bersama orang-orang yang sabar. | QS. Al-Baqarah: 153",
 run:"Luruskan dan rapatkan shaf • Matikan HP saat sholat • Jaga kebersihan masjid • Infaq dan sedekah dapat disalurkan melalui pengurus DKM"};
 let C={...D};try{C={...D,...JSON.parse(localStorage.getItem("cfg")||"{}")}}catch(e){}
+let C0={...C};
 const $=i=>document.getElementById(i);
-const LY=[["0","Otomatis (ganti tiap 15 menit)"],["1","1 - Klasik"],["2","2 - Menu Samping"],["3","3 - Media Layar Penuh"],["4","4 - Analog + Khotbah"],["5","5 - Analog Besar"],["6","6 - Kartu di Atas"]];
-const TP=[["0","Otomatis ganti tiap hari"],["1","1 - Zamrud"],["2","2 - Malam Biru"],["3","3 - Terang"],["4","4 - Hitam Emas"],["5","5 - Ungu Senja"]];
+const LY=[["0","Otomatis (ganti tiap 15 menit)"],["1","1 - Klasik"],["2","2 - Menu Samping"],["3","3 - Media Layar Penuh"],["4","4 - Analog + Khotbah"],["5","5 - Analog Besar"],["6","6 - Kartu di Atas"],["7","7 - Live + Konten (kanan)"],["8","8 - Live + Konten (3 kolom)"]];
+const TP=[["0","Otomatis ganti tiap hari"],["1","1 - Zamrud"],["2","2 - Malam Biru"],["3","3 - Terang"],["4","4 - Hitam Emas"],["5","5 - Ungu Senja"],["6","6 - Makkah (Kiswah Hitam Emas)"],["7","7 - Madinah (Qubah Hijau)"],["8","8 - Haramain Fajar"]];
 const F=[["nama","Nama masjid","text"],["kota","Kota / wilayah","text"],["almt","Alamat (tampil di header)","text"],["rek","Info rekening infaq (tampil di header)","text"],["lat","Lintang (selatan = negatif)","number"],["lng","Bujur","number"],["tz","Zona waktu (WIB=7, WITA=8, WIT=9)","number"],["ih","Ihtiyati (menit)","number"],
 ...N.map((n,i)=>["k"+i,"Koreksi manual "+n+" (menit, boleh minus)","number"]),
 ["adz","Durasi layar adzan (menit)","number"],["solat","Durasi layar sholat gelap (menit)","number"],["hj","Koreksi tanggal Hijriah (hari)","number"],
 ["iq0","Iqomah Subuh (menit)","number"],["iq1","Iqomah Dzuhur (menit)","number"],["iq2","Iqomah Ashar (menit)","number"],["iq3","Iqomah Maghrib (menit)","number"],["iq4","Iqomah Isya (menit)","number"],
-["snm","Mode suara","sel",[["adzan","Putar suara adzan & iqomah (file upload)"],["alert","Hanya notifikasi + bunyi alert"]]],["lay","Layout dashboard","sel",LY],["tpl","Template warna","sel",TP],["pin","PIN admin (kosong = tanpa PIN)","text"],
+["snm","Mode suara","sel",[["adzan","Putar suara adzan & iqomah (file upload)"],["alert","Hanya notifikasi + bunyi alert"]]],["lay","Layout dashboard","sel",LY],["tpl","Template warna","sel",TP],["live","Live YouTube di layout 7 & 8 (1=ya, 0=tidak)","number"],["chan","ID channel YouTube (live)","text"],["lmute","Live: bisukan suara (1=ya, 0=bersuara)","number"],["sa","Pilih adzan aktif","sel",[["1","Adzan pilihan 1"],["2","Adzan pilihan 2"],["3","Adzan pilihan 3"]]],["si","Pilih iqomah aktif","sel",[["1","Iqomah pilihan 1"],["2","Iqomah pilihan 2"],["3","Iqomah pilihan 3"]]],["tone","Nada alert (bila tanpa file suara)","sel",[["1","Bip"],["2","Lonceng 3 nada"],["3","Dua nada rendah"]]],["isy","Isyroq: menit setelah Terbit","number"],["isyd","Layar pemberitahuan Isyroq (menit, 0=mati)","number"],["clk","Penyesuaian jam (detik, + atau -)","number"],["sheet","ID / link Google Sheet pengendali dari HP","text"],["sync","Sinkron Sheet tiap (menit)","number"],["pin","PIN admin (kosong = tanpa PIN)","text"],
 ["khb","Khatib Jum'at berikutnya","text"],["khi","Imam Jum'at","text"],["khm","Muadzin Jum'at","text"],["kht","Tema khutbah","text"],["kTgl","Laporan kas: tanggal","text"],["kSal","Laporan kas: saldo (Rp)","text"],["kIn","Laporan kas: pemasukan (Rp)","text"],["kOut","Laporan kas: pengeluaran (Rp)","text"],["hadits","Hadits / nasihat (satu per baris: teks | sumber)","ta"],["urls","Link video/gambar online (satu per baris, opsional)","ta"],["run","Teks berjalan","text"]];
 $("fm").innerHTML=F.map(([k,l,t,o])=>t=="sel"?`<label>${l}<select id="f_${k}">${o.map(([v,x])=>`<option value="${v}">${x}</option>`).join("")}</select></label>`:t=="ta"?`<label class="w">${l}<textarea id="f_${k}" rows="5"></textarea></label>`:`<label${k=="run"?' class="w"':""}>${l}<input id="f_${k}" type="${t}" step="any"></label>`).join("");
-$("cd").innerHTML=N.map((n,i)=>`<div class="c" id="c${i}"><i>${n}</i><b></b></div>`).join("");
+$("cd").innerHTML=DO.map(i=>`<div class="c" id="c${i}"><i>${N[i]}</i><b></b></div>`).join("");
 
 // ===== Hitung waktu sholat (parameter Kemenag RI: Subuh 20°, Isya 18°, Ashar Syafi'i, ihtiyati) =====
 const R=Math.PI/180,sin=a=>Math.sin(a*R),cos=a=>Math.cos(a*R),tan=a=>Math.tan(a*R),acos=x=>Math.acos(Math.max(-1,Math.min(1,x)))/R,fix=(a,b)=>a-b*Math.floor(a/b);
@@ -126,7 +158,7 @@ function calc(y,m,d){
  const f=(a,sg,t)=>{for(let i=0;i<3;i++)t=A(a,t,sg);return t};
  const asrA=Math.atan(1/(1+tan(Math.abs(lat-S(15/24).d))))/R,ih=C.ih*60,sc=h=>(h+off)*3600;
  const fj=sc(f(20,-1,5))+ih,sr=sc(f(.833,-1,6)),dz=sc(noon)+ih,as=sc(f(-asrA,1,15))+ih,mg=sc(f(.833,1,18))+ih,is=sc(f(18,1,19))+ih;
- return[fj-600,fj,sr,sr+1080,dz,as,mg,is].map((t,i)=>Math.round(t/60)*60+(+C["k"+i]||0)*60)}
+ return[fj-600,fj,sr,sr+1080,dz,as,mg,is,sr+(+C.isy||10)*60].map((t,i)=>Math.round(t/60)*60+(+C["k"+i]||0)*60)}
 
 // ===== Penyimpanan file (IndexedDB) =====
 const db=new Promise((ok,no)=>{try{const r=indexedDB.open("jam",1);r.onupgradeneeded=()=>r.result.createObjectStore("m",{keyPath:"id"});r.onsuccess=()=>ok(r.result);r.onerror=no}catch(e){no(e)}});
@@ -136,26 +168,36 @@ async function loadM(){try{const a=await tx("readonly",s=>s.getAll())||[];MED.fo
  MED=a.filter(r=>r.kind=="media").map(r=>({t:r.type.startsWith("video")?"v":"i",u:URL.createObjectURL(r.blob),id:r.id,n:r.name}));
  AUD={};a.filter(r=>r.kind!="media").forEach(r=>AUD[r.kind]={u:URL.createObjectURL(r.blob),n:r.name,id:r.id});const lg=$("lg");lg.style.display=AUD.logo?"block":"none";if(AUD.logo)lg.src=AUD.logo.u}catch(e){}}
 async function up(inp,kind){try{for(const f of inp.files){const id=kind=="media"?"m"+Date.now()+Math.random().toString(36).slice(2,6):"a_"+kind;await tx("readwrite",s=>s.put({id,kind,name:f.name,type:f.type,blob:f}))}}catch(e){alert("Gagal menyimpan file di browser ini.")}inp.value="";await loadM();rf();slide()}
-function rf(){$("fl").innerHTML=[["adzan","Adzan"],["adzanS","Adzan Subuh"],["iqomah","Iqomah"],["logo","Logo"]].map(([k,l])=>`<div>${l}: ${AUD[k]?AUD[k].n+` <button data-d="${AUD[k].id}">Hapus</button>`:"belum ada"}</div>`).join("")+"<div>Media: "+(MED.length?MED.map(m=>`${m.n}<button data-d="${m.id}">Hapus</button>`).join(""):"belum ada")+"</div>"}
+function rf(){$("fl").innerHTML=[["adzan1","Adzan 1"],["adzan2","Adzan 2"],["adzan3","Adzan 3"],["adzanS","Adzan Subuh"],["iqomah1","Iqomah 1"],["iqomah2","Iqomah 2"],["iqomah3","Iqomah 3"],["logo","Logo"]].map(([k,l])=>`<div>${l}: ${AUD[k]?AUD[k].n+` <button data-d="${AUD[k].id}">Hapus</button>`:"belum ada"}</div>`).join("")+"<div>Media: "+(MED.length?MED.map(m=>`${m.n}<button data-d="${m.id}">Hapus</button>`).join(""):"belum ada")+"</div>"}
 $("fl").onclick=async e=>{const d=e.target.dataset.d;if(d){await tx("readwrite",s=>s.delete(d));await loadM();rf();slide()}};
 
-// ===== Slide: video/gambar + hadits =====
-let hi=0,li=0,st;
-function slide(){clearTimeout(st);const mb=$("mb"),Hs=C.hadits.split("\n").filter(x=>x.trim()),
- M=[...MED,...C.urls.split("\n").map(u=>u.trim()).filter(Boolean).map(u=>({t:/\.(mp4|webm|m3u8)/i.test(u)?"v":"i",u}))];
- let L=[];if(M.length)M.forEach(m=>{L.push(m);if(Hs.length)L.push({t:"h"})});else if(Hs.length)L=[{t:"h"}];L.push({t:"a"});
- mb.innerHTML="";if(!L.length)return;const it=L[li++%L.length];
- if(it.t=="a"){const [n,a]=AH[ai++%AH.length].split("=");mb.innerHTML='<div class="hq">Asmaul Husna<span class="hs" style="font-size:6vh">'+n+'</span>'+a+'</div>';st=setTimeout(slide,12000)}else if(it.t=="h"){const [h,s]=Hs[hi++%Hs.length].split("|");mb.innerHTML=`<div class="hq">“${h.trim()}”<span class="hs">${(s||"").trim()}</span></div>`;st=setTimeout(slide,15000)}
- else if(it.t=="i"){const i=new Image();i.src=it.u;i.onerror=slide;mb.appendChild(i);st=setTimeout(slide,12000)}
- else{const v=document.createElement("video");v.src=it.u;v.muted=true;v.autoplay=true;v.playsInline=true;v.onended=slide;v.onerror=slide;mb.appendChild(v);v.play().catch(()=>{})}}
+// ===== Slide: video/gambar/hadits/kas/Asmaul Husna =====
+const ln=s=>String(s||"").split(/\n|;;/).map(x=>x.trim()).filter(Boolean);
+const nu=u=>{const m=u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=\w+&)?id=)([\w-]+)/);return m?"https://drive.google.com/thumbnail?id="+m[1]+"&sz=w1920":u};
+const isV=u=>/\.(mp4|webm|m3u8)(\?|$)/i.test(u);
+function mk(id,vid){let li=0,hi=0,ai=0,st;
+ function run(){clearTimeout(st);const el=$(id),nx=ms=>{st=setTimeout(run,ms)};
+  if(!el.offsetWidth){nx(5000);return}
+  const Hs=ln(C.hadits),U=String(C.urls||"").split(/[\s|]+/).filter(Boolean).map(u=>({t:isV(u)?"v":"i",u:nu(u)})),M=[...MED,...PMED,...U].filter(m=>vid||m.t=="i");
+  let L=[];M.forEach(m=>{L.push(m);if(Hs.length)L.push({t:"h"})});if(!M.length&&Hs.length)L=[{t:"h"}];
+  if(C.kSal)L.push({t:"k"});L.push({t:"a"});
+  el.innerHTML="";const it=L[li++%L.length];
+  if(it.t=="a"){const [n,a]=AH[ai++%AH.length].split("=");el.innerHTML='<div class="hq">Asmaul Husna<span class="hs" style="font-size:6vh">'+n+'</span>'+a+'</div>';nx(12000)}
+  else if(it.t=="h"){const [h,s]=Hs[hi++%Hs.length].split("|");el.innerHTML='<div class="hq">“'+E(h.trim())+'”<span class="hs">'+E((s||"").trim())+'</span></div>';nx(15000)}
+  else if(it.t=="k"){el.innerHTML='<div class="hq"><b>Laporan Kas Masjid</b><span class="hs">'+E(C.kTgl)+'</span>Saldo<span class="hs" style="font-size:6vh">Rp '+E(C.kSal)+'</span>Pemasukan Rp '+E(C.kIn)+' • Pengeluaran Rp '+E(C.kOut)+'</div>';nx(15000)}
+  else if(it.t=="i"){const i=new Image();i.onerror=()=>nx(3000);i.src=it.u;el.appendChild(i);nx(12000)}
+  else{const v=document.createElement("video");v.muted=true;v.autoplay=true;v.playsInline=true;v.onended=run;v.onerror=()=>nx(3000);v.src=it.u;el.appendChild(v);v.play().catch(()=>{})}}
+ return run}
+const slideMB=mk("mb",1),slideCN=mk("cn",0);
+function slide(){slideMB();slideCN()}
 
 // ===== Jam & fase =====
 const p2=n=>String(Math.floor(n)).padStart(2,"0"),hm=s=>{s=((s%86400)+86400)%86400;return p2(s/3600)+":"+p2(s%3600/60)};
 const cd=s=>p2(s/3600)+":"+p2(s%3600/60)+":"+p2(s%60),cm=s=>p2(s/60)+":"+p2(s%60);
 let sim=0,key="",T,T2,last="",ac,au=new Audio(),un=0;
-const now=()=>new Date(Date.now()+sim*1e3+C.tz*36e5);
+const now=()=>new Date(Date.now()+sim*1e3+(+C.clk||0)*1e3+C.tz*36e5);
 function init(){$("ht").style.display="none";try{ac=ac||new(window.AudioContext||window.webkitAudioContext)()}catch(e){}try{navigator.wakeLock&&navigator.wakeLock.request("screen").catch(()=>{})}catch(e){}}
-function beep(n){if(!ac)return;for(let i=0;i<n;i++){const o=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime+i*.8;o.connect(g);g.connect(ac.destination);o.frequency.value=880;g.gain.setValueAtTime(.4,t);g.gain.exponentialRampToValueAtTime(.001,t+.7);o.start(t);o.stop(t+.7)}}
+function beep(n){if(!ac)return;for(let i=0;i<n;i++){const o=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime+i*.8;o.connect(g);g.connect(ac.destination);o.frequency.value=TN[(+C.tone||1)-1][i%TN[(+C.tone||1)-1].length];g.gain.setValueAtTime(.4,t);g.gain.exponentialRampToValueAtTime(.001,t+.7);o.start(t);o.stop(t+.7)}}
 function play(a,n){if(C.snm=="adzan"&&a){au.src=a.u;au.play().catch(()=>beep(n))}else beep(n)}
 const dfmt=(o,l)=>{try{return new Intl.DateTimeFormat(l,{...o,timeZone:"UTC"})}catch(e){return null}};
 function tick(){
@@ -163,12 +205,11 @@ function tick(){
  if(k!==key){key=k;T=calc(Y,M,Dd);T2=calc(Y,M,Dd+1);T.forEach((t,i)=>$("c"+i).lastChild.textContent=hm(t));
   $("c4").firstChild.textContent=jum?"Jum'at":"Dzuhur";daily(Y,M,Dd,n);
   $("gr").textContent=(dfmt({weekday:"long",day:"numeric",month:"long",year:"numeric"},"id-ID")||{format:()=>n.toDateString()}).format(n)}
- document.body.dataset.t=+C.tpl>0?C.tpl:(Math.floor((Date.UTC(Y,M,Dd)-Date.UTC(Y,0,0))/864e5)%5)+1;
- document.body.dataset.l=+C.lay>0?C.lay:Math.floor(Date.now()/9e5)%6+1;$("nm").textContent=C.nama;$("kt").textContent=[C.kota,C.almt,C.rek].filter(Boolean).join(" • ");$("rt").textContent=RT;
+ document.body.dataset.t=+C.tpl>0?C.tpl:(Math.floor((Date.UTC(Y,M,Dd)-Date.UTC(Y,0,0))/864e5)%8)+1;
+ const LA=[1,2,3,4,5,6].concat(+C.live?[7,8]:[]),lv=+C.lay>0?+C.lay:LA[Math.floor(Date.now()/9e5)%LA.length];if(document.body.dataset.l!=lv){document.body.dataset.l=lv;setTimeout(slide,50)}document.body.dataset.live=((lv==7||lv==8)&&+C.live)?1:0;$("nm").textContent=C.nama;$("kt").textContent=[C.kota,C.almt,C.rek].filter(Boolean).join(" • ");$("rt").textContent=RT;
  $("hh").setAttribute("transform","rotate("+s/120%360+")");$("mh").setAttribute("transform","rotate("+s%3600/10+")");$("sh").setAttribute("transform","rotate("+s%60*6+")");$("ck2").innerHTML=p2(s/3600)+":"+p2(s%3600/60)+"<small>:"+p2(s%60)+"</small>";
- const hf=dfmt({day:"numeric",month:"long",year:"numeric"},"id-ID-u-ca-islamic-umalqura");
- $("hj").textContent=hf?hf.format(new Date(Date.UTC(Y,M,Dd+(+C.hj||0)+(s>=T[6]?1:0),12)))+" H":"";
- const nk=MAIN.findIndex(i=>T[i]>s),nt=nk<0?T2[1]+86400:T[MAIN[nk]],ni=nk<0?1:MAIN[nk];
+ $("hj").textContent=hjStr(Date.UTC(Y,M,Dd+(+C.hj||0)+(s>=T[6]?1:0),12));
+ const nk=NX.findIndex(i=>T[i]>s),nt=nk<0?T2[1]+86400:T[NX[nk]],ni=nk<0?1:NX[nk];
  $("nn").textContent="Menuju "+(ni==4&&jum?"Jum'at":N[ni]);$("nc").textContent=cd(nt-s);
  N.forEach((_,i)=>$("c"+i).classList.toggle("on",ni==i));
  let ph="",ov=0,sol=0;
@@ -176,16 +217,17 @@ function tick(){
   if(s>=t&&s<t+ad){ph="A"+j;ov=1;$("ot").textContent="Waktu "+nm;$("oc").textContent=hm(t);$("op").textContent="Telah masuk waktu sholat "+nm+" untuk wilayah "+C.kota+" dan sekitarnya"}
   else if(s>=t+ad&&s<t+ad+iq){ph="I"+j;ov=1;$("ot").textContent="Menuju Iqomah "+nm;$("oc").textContent=cm(t+ad+iq-s);$("op").textContent="Luruskan niat, rapatkan shaf, matikan HP"}
   else if(s>=t+ad+iq&&s<t+ad+iq+so){ph="S"+j;sol=1}});
- $("ov").style.display=ov?"flex":"none";$("sol").style.display=sol?"flex":"none";
+ if(!ph&&+C.isyd>0&&s>=T[8]&&s<T[8]+C.isyd*60){ph="Y";ov=1;$("ot").textContent="Waktu Isyroq";$("oc").textContent=hm(T[8]);$("op").textContent="Telah masuk waktu sholat sunnah Isyroq"}
+ $("ov").style.display=ov?"flex":"none";$("sol").style.display=sol?"flex":"none";setLive(document.body.dataset.live=="1"&&!ov&&!sol);
  if(ph!==last){au.pause();const j=+ph.slice(1);
-  if(ph[0]=="A")play(j==0&&AUD.adzanS||AUD.adzan,3);if(ph[0]=="I")beep(1);if(ph[0]=="S")play(AUD.iqomah,2);last=ph}}
+  if(ph[0]=="A")play(j==0&&gA("adzanS")||adz1(),3);if(ph[0]=="I"||ph[0]=="Y")beep(1);if(ph[0]=="S")play(iqm1(),2);last=ph}}
 
 // ===== Asmaul Husna, hari penting, khotbah, kas, jam analog =====
 const AH="Ar Rahman=Yang Maha Pengasih;Ar Rahim=Yang Maha Penyayang;Al Malik=Yang Maha Merajai;Al Quddus=Yang Maha Suci;As Salam=Yang Maha Memberi Kesejahteraan;Al Mu'min=Yang Maha Memberi Keamanan;Al Muhaimin=Yang Maha Memelihara;Al Aziz=Yang Maha Perkasa;Al Jabbar=Yang Maha Kuasa;Al Mutakabbir=Yang Maha Megah;Al Khaliq=Yang Maha Pencipta;Al Bari'=Yang Maha Mengadakan;Al Mushawwir=Yang Maha Membentuk Rupa;Al Ghaffar=Yang Maha Pengampun;Al Qahhar=Yang Maha Perkasa;Al Wahhab=Yang Maha Pemberi Karunia;Ar Razzaq=Yang Maha Pemberi Rezeki;Al Fattah=Yang Maha Pembuka Rahmat;Al Alim=Yang Maha Mengetahui;Al Qabidh=Yang Maha Menyempitkan;Al Basith=Yang Maha Melapangkan;Al Khafidh=Yang Maha Merendahkan;Ar Rafi'=Yang Maha Meninggikan;Al Mu'izz=Yang Maha Memuliakan;Al Mudzill=Yang Maha Menghinakan;As Sami'=Yang Maha Mendengar;Al Bashir=Yang Maha Melihat;Al Hakam=Yang Maha Menetapkan;Al Adl=Yang Maha Adil;Al Lathif=Yang Maha Lembut;Al Khabir=Yang Maha Mengenal;Al Halim=Yang Maha Penyantun;Al Azhim=Yang Maha Agung;Al Ghafur=Yang Maha Pengampun;Asy Syakur=Yang Maha Pembalas Budi;Al Aliy=Yang Maha Tinggi;Al Kabir=Yang Maha Besar;Al Hafizh=Yang Maha Memelihara;Al Muqit=Yang Maha Pemberi Kecukupan;Al Hasib=Yang Maha Membuat Perhitungan;Al Jalil=Yang Maha Luhur;Al Karim=Yang Maha Pemurah;Ar Raqib=Yang Maha Mengawasi;Al Mujib=Yang Maha Mengabulkan;Al Wasi'=Yang Maha Luas;Al Hakim=Yang Maha Bijaksana;Al Wadud=Yang Maha Mencintai;Al Majid=Yang Maha Mulia;Al Ba'its=Yang Maha Membangkitkan;Asy Syahid=Yang Maha Menyaksikan;Al Haqq=Yang Maha Benar;Al Wakil=Yang Maha Memelihara;Al Qawiy=Yang Maha Kuat;Al Matin=Yang Maha Kokoh;Al Waliy=Yang Maha Melindungi;Al Hamid=Yang Maha Terpuji;Al Muhshi=Yang Maha Menghitung;Al Mubdi'=Yang Maha Memulai;Al Mu'id=Yang Maha Mengembalikan;Al Muhyi=Yang Maha Menghidupkan;Al Mumit=Yang Maha Mematikan;Al Hayy=Yang Maha Hidup;Al Qayyum=Yang Maha Mandiri;Al Wajid=Yang Maha Menemukan;Al Maajid=Yang Maha Mulia;Al Wahid=Yang Maha Esa;Ash Shamad=Yang Maha Dibutuhkan;Al Qadir=Yang Maha Kuasa;Al Muqtadir=Yang Maha Berkuasa;Al Muqaddim=Yang Maha Mendahulukan;Al Mu'akhkhir=Yang Maha Mengakhirkan;Al Awwal=Yang Maha Awal;Al Akhir=Yang Maha Akhir;Azh Zhahir=Yang Maha Nyata;Al Bathin=Yang Maha Tersembunyi;Al Wali=Yang Maha Memerintah;Al Muta'ali=Yang Maha Tinggi;Al Barr=Yang Maha Dermawan;At Tawwab=Yang Maha Penerima Taubat;Al Muntaqim=Yang Maha Pemberi Balasan;Al Afuww=Yang Maha Pemaaf;Ar Ra'uf=Yang Maha Pengasih;Malikul Mulk=Yang Maha Menguasai Kerajaan;Dzul Jalali wal Ikram=Yang Maha Memiliki Kebesaran dan Kemuliaan;Al Muqsith=Yang Maha Adil;Al Jami'=Yang Maha Mengumpulkan;Al Ghaniy=Yang Maha Kaya;Al Mughni=Yang Maha Memberi Kekayaan;Al Mani'=Yang Maha Mencegah;Adh Dharr=Yang Maha Memberi Mudharat;An Nafi'=Yang Maha Memberi Manfaat;An Nur=Yang Maha Bercahaya;Al Hadi=Yang Maha Pemberi Petunjuk;Al Badi'=Yang Maha Pencipta Tanpa Contoh;Al Baqi=Yang Maha Kekal;Al Warits=Yang Maha Mewarisi;Ar Rasyid=Yang Maha Pandai;Ash Shabur=Yang Maha Sabar".split(";");
 let ai=0,RT="";
 const E=s=>String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 const HV=(()=>{try{return new Intl.DateTimeFormat("en-u-ca-islamic-umalqura",{day:"numeric",month:"numeric",year:"numeric",timeZone:"UTC"})}catch(e){return null}})();
-const hjd=t=>{const p=HV.formatToParts(new Date(t)),g=k=>+p.find(x=>x.type==k).value;return[g("day"),g("month")]};
+const hjd=t=>{const p=HV.formatToParts(new Date(t)),g=k=>{const x=p.find(y=>y.type==k||(k=="year"&&y.type=="relatedYear"));return x?+x.value:0};return[g("day"),g("month"),g("year")]};
 const EV=[[1,1,"Tahun Baru Hijriah"],[12,3,"Maulid Nabi"],[27,7,"Isra Mi'raj"],[15,8,"Nisfu Sya'ban"],[1,9,"Awal Ramadhan"],[1,10,"Idul Fitri"],[10,12,"Idul Adha"]];
 function daily(Y,M,Dd,n){const base=Date.UTC(Y,M,Dd,12)+(+C.hj||0)*864e5,x=[];
  try{if(HV){let best=null;EV.forEach(([d,m,nm])=>{for(let i=0;i<400;i++){const h=hjd(base+i*864e5);if(h[0]==d&&h[1]==m){if(!best||i<best[0])best=[i,nm];break}}});
@@ -200,19 +242,101 @@ function daily(Y,M,Dd,n){const base=Date.UTC(Y,M,Dd,12)+(+C.hj||0)*864e5,x=[];
 (()=>{let h='<circle r="48" style="fill:var(--cd);stroke:var(--a)" stroke-width="1.5"/>';for(let i=0;i<12;i++)h+='<line y1="-44" y2="-'+(i%3?41:38)+'" transform="rotate('+i*30+')" style="stroke:var(--tx)" stroke-width="'+(i%3?1:2)+'"/>';
  h+='<line id="hh" y2="-24" style="stroke:var(--tx)" stroke-width="3.2" stroke-linecap="round"/><line id="mh" y2="-35" style="stroke:var(--tx)" stroke-width="2" stroke-linecap="round"/><line id="sh" y2="-40" style="stroke:var(--a)" stroke-width=".8"/><circle r="2" style="fill:var(--a)"/>';$("an").innerHTML=h})();
 
+// ===== Hijriah, live, suara, kendali jarak jauh =====
+const HM=["Muharram","Safar","Rabiulawal","Rabiulakhir","Jumadilawal","Jumadilakhir","Rajab","Syaban","Ramadhan","Syawal","Dzulkaidah","Dzulhijjah"];
+const hjStr=t=>{try{const h=hjd(t);return h[0]+" "+HM[h[1]-1]+" "+h[2]+" H"}catch(e){return""}};
+const TN=[[880],[660,880,1320],[440,554]];
+const gA=k=>PAUD[k]||AUD[k],adz1=()=>gA("adzan"+C.sa)||gA("adzan"),iqm1=()=>gA("iqomah"+C.si)||gA("iqomah");
+const EMB=()=>"https://www.youtube.com/embed/live_stream?channel="+encodeURIComponent(C.chan||D.chan)+"&autoplay=1&mute="+(+C.lmute?1:0)+"&controls=0&rel=0&playsinline=1&modestbranding=1"+(/^https?:/.test(location.origin)?"&origin="+encodeURIComponent(location.origin):"");
+let lvOn=-1;function setLive(w){const f=$("lv");w=w?1:0;if(w==lvOn)return;lvOn=w;f.src=w?EMB():"about:blank"}
+let REM={},SYN="";
+const ss=m=>{SYN=m;const e=$("sy");if(e)e.textContent=m};
+function sync(){const m=String(C0.sheet||"").match(/\/d\/([\w-]+)/),id=m?m[1]:String(C0.sheet||"").trim();
+ if(!id){REM={};C={...C0,...RP};return}
+ let ok=0;window.__gv=r=>{ok=1;try{const o={};
+  r.table.rows.forEach(w=>{const c=w.c||[];if(!c[0]||!c[1]||c[0].v==null||c[1].v==null)return;const k=String(c[0].v).trim(),v=c[1].v;if(String(v)===""||!(k in D)||k=="pin"||k=="sheet")return;
+   if(typeof D[k]=="number"){const x=parseFloat(v);if(!isNaN(x))o[k]=x}else o[k]=String(v)});
+  const ch=JSON.stringify([o.hadits,o.urls,o.kSal,o.kIn,o.kOut])!==JSON.stringify([REM.hadits,REM.urls,REM.kSal,REM.kIn,REM.kOut]);
+  REM=o;C={...C0,...REM,...RP};key="";if(ch)slide();
+  ss("Sinkron OK "+new Date().toLocaleTimeString("id-ID")+" • "+Object.keys(o).length+" nilai terbaca")}catch(e){ss("Format lembar tidak cocok (kolom A=kunci, B=nilai)")}};
+ const sc=document.createElement("script");sc.onerror=()=>ss("Gagal terhubung ke Google Sheets (cek internet)");
+ sc.src="https://docs.google.com/spreadsheets/d/"+id+"/gviz/tq?tqx=out:json;responseHandler:__gv&_="+Date.now();document.head.appendChild(sc);
+ setTimeout(()=>{sc.remove();if(!ok)ss("Tidak ada respon. Cek ID dan izin berbagi (Siapa saja dengan link: Pelihat)")},15000)}
+$("bn").onclick=()=>{ss("Menyinkron...");sync()};
+$("bu1").onclick=()=>{init();au.pause();const a=adz1();if(a){au.src=a.u;au.play().catch(()=>beep(3))}else beep(3)};
+$("bu2").onclick=()=>{init();au.pause();const a=iqm1();if(a){au.src=a.u;au.play().catch(()=>beep(2))}else beep(2)};
+$("bu3").onclick=()=>{au.pause()};
+
+// ===== QR code (versi 1-6, koreksi M) =====
+// QRBEGIN
+function qrm(txt){
+ const d=Array.from(unescape(encodeURIComponent(txt))).map(c=>c.charCodeAt(0)),T=[0,[16,10,1],[28,16,1],[44,26,1],[32,18,2],[43,24,2],[27,16,4]];
+ let v=1;while(v<=6&&d.length>T[v][0]*T[v][2]-2)v++;if(v>6)return null;
+ const [dc,ec,nb]=T[v],D=dc*nb,b=[],put=(x,n)=>{for(let i=n-1;i>=0;i--)b.push(x>>i&1)};
+ put(4,4);put(d.length,8);d.forEach(x=>put(x,8));put(0,Math.min(4,D*8-b.length));while(b.length%8)b.push(0);for(let p=0;b.length<D*8;p^=1)put(p?17:236,8);
+ const cw=[];for(let i=0;i<b.length;i+=8)cw.push(parseInt(b.slice(i,i+8).join(""),2));
+ const EX=[],LG=[];for(let i=0,x=1;i<255;i++){EX[i]=x;LG[x]=i;x<<=1;if(x>255)x^=285}
+ const mul=(a,c)=>a&&c?EX[(LG[a]+LG[c])%255]:0;
+ let g=[1];for(let i=0;i<ec;i++){const n=g.concat([0]);for(let j=0;j<g.length;j++)n[j+1]^=mul(g[j],EX[i]);g=n}
+ const rs=a=>{const r=a.concat(Array(ec).fill(0));for(let i=0;i<a.length;i++){const c=r[i];if(c)for(let j=1;j<g.length;j++)r[i+j]^=mul(g[j],c)}return r.slice(a.length)};
+ const bl=[],es=[];for(let i=0;i<nb;i++){const x=cw.slice(i*dc,(i+1)*dc);bl.push(x);es.push(rs(x))}
+ const fin=[];for(let i=0;i<dc;i++)bl.forEach(x=>fin.push(x[i]));for(let i=0;i<ec;i++)es.forEach(x=>fin.push(x[i]));
+ const bits=[];fin.forEach(x=>{for(let i=7;i>=0;i--)bits.push(x>>i&1)});
+ const n=17+4*v,M=[],F=[];for(let i=0;i<n;i++){M.push(Array(n).fill(0));F.push(Array(n).fill(0))}
+ const set=(r,c,x)=>{if(r>=0&&c>=0&&r<n&&c<n){M[r][c]=x;F[r][c]=1}};
+ const fp=(r,c)=>{for(let i=-1;i<=7;i++)for(let j=-1;j<=7;j++)set(r+i,c+j,(i>=0&&i<=6&&(j==0||j==6)||j>=0&&j<=6&&(i==0||i==6)||i>=2&&i<=4&&j>=2&&j<=4)?1:0)};
+ fp(0,0);fp(0,n-7);fp(n-7,0);
+ for(let i=8;i<n-8;i++){set(6,i,i%2==0?1:0);set(i,6,i%2==0?1:0)}
+ if(v>1){const a=4*v+10;for(let i=-2;i<=2;i++)for(let j=-2;j<=2;j++)set(a+i,a+j,Math.max(Math.abs(i),Math.abs(j))!=1?1:0)}
+ set(n-8,8,1);
+ for(let i=0;i<9;i++){if(!F[8][i])set(8,i,0);if(!F[i][8])set(i,8,0)}
+ for(let i=0;i<8;i++){if(!F[8][n-1-i])set(8,n-1-i,0);if(!F[n-1-i][8])set(n-1-i,8,0)}
+ let k=0,up=true;for(let c=n-1;c>0;c-=2){if(c==6)c--;for(let i=0;i<n;i++){const r=up?n-1-i:i;for(let j=0;j<2;j++){const x=c-j;if(!F[r][x])M[r][x]=k<bits.length?bits[k++]:0}}up=!up}
+ const MK=[(r,c)=>(r+c)%2==0,(r,c)=>r%2==0,(r,c)=>c%3==0,(r,c)=>(r+c)%3==0,(r,c)=>(Math.floor(r/2)+Math.floor(c/3))%2==0,(r,c)=>r*c%2+r*c%3==0,(r,c)=>(r*c%2+r*c%3)%2==0,(r,c)=>((r+c)%2+r*c%3)%2==0];
+ const build=m=>{const A=M.map(x=>x.slice());for(let r=0;r<n;r++)for(let c=0;c<n;c++)if(!F[r][c]&&MK[m](r,c))A[r][c]^=1;
+  let f=m<<10;for(let i=14;i>=10;i--)if(f>>i&1)f^=0x537<<(i-10);const fm=((m<<10)|f)^0x5412;
+  for(let i=0;i<15;i++){const x=fm>>i&1;A[i<6?i:i<8?i+1:n-15+i][8]=x;A[8][i<8?n-i-1:i<9?7:14-i]=x}
+  A[n-8][8]=1;return A};
+ const pen=A=>{let p=0,dk=0;
+  for(let t=0;t<2;t++)for(let i=0;i<n;i++){let run=1,s="";for(let j=0;j<n;j++){const x=t?A[j][i]:A[i][j];s+=x;if(!t)dk+=x;if(j>0){const y=t?A[j-1][i]:A[i][j-1];if(x==y){run++;if(run==5)p+=3;else if(run>5)p++}else run=1}}
+   const m1=s.match(/(?=00001011101|10111010000)/g);p+=40*(m1?m1.length:0)}
+  for(let i=0;i<n-1;i++)for(let j=0;j<n-1;j++){const x=A[i][j];if(x==A[i][j+1]&&x==A[i+1][j]&&x==A[i+1][j+1])p+=3}
+  return p+Math.floor(Math.abs(dk*100/(n*n)-50)/5)*10};
+ let best=null,bp=1e9;for(let m=0;m<8;m++){const A=build(m),p=pen(A);if(p<bp){bp=p;best=A}}return best}
+// QREND
+function qrDraw(cv,txt){const m=qrm(txt);if(!m){cv.style.display="none";return false}const n=m.length,z=Math.max(3,Math.floor(innerHeight*.36/(n+8))),x=cv.getContext("2d");
+ cv.width=cv.height=(n+8)*z;x.fillStyle="#fff";x.fillRect(0,0,cv.width,cv.height);x.fillStyle="#000";
+ for(let r=0;r<n;r++)for(let c=0;c<n;c++)if(m[r][c])x.fillRect((c+4)*z,(r+4)*z,z,z);return true}
+// ===== Kendali dari HP lewat QR (hanya di APK) =====
+let RP={},PMED=[],PAUD={},PV=-1,PC=0;
+const pj=()=>{try{return JSON.parse(Android.info())}catch(e){return null}};
+function showQR(){const b=$("qrb"),i=pj();if(!i){b.style.display="none";return}
+ b.style.display="block";const cv=$("qr"),t=$("qt");
+ if(!i.ip){cv.style.display="none";t.textContent="TV belum tersambung ke Wi-Fi / jaringan.";return}
+ cv.style.display="block";qrDraw(cv,i.url);t.innerHTML="Scan dengan kamera HP (Wi-Fi sama dengan TV)<br>atau buka: "+E(i.url)}
+function pollPhone(){let st;try{st=JSON.parse(Android.state())}catch(e){return}
+ try{if(PC++%5==0){const e={...C};delete e.pin;delete e.sheet;Android.eff(JSON.stringify(e))}}catch(e){}
+ if(st.v===PV)return;PV=st.v;const o={};
+ Object.keys(st.cfg||{}).forEach(k=>{if(!(k in D)||k=="pin"||k=="sheet")return;const v=st.cfg[k];if(typeof D[k]=="number"){const x=parseFloat(v);if(!isNaN(x))o[k]=x}else if(String(v)!=="")o[k]=String(v)});
+ RP=o;PMED=[];PAUD={};const p=pj(),base="http://127.0.0.1:"+(p?p.port:8080)+"/m/";
+ (st.media||[]).forEach(m=>{const u=base+m.id;if(m.kind=="media")PMED.push({t:/^video/.test(m.type)?"v":"i",u:u,id:m.id,n:m.name});else PAUD[m.kind]={u:u,n:m.name,id:m.id}});
+ C={...C0,...REM,...RP};key="";lvOn=-1;slide()}
+
 // ===== Admin =====
 function sh(v){$("set").style.display=v?"block":"none";if(!v){un=0;return}
  const need=C.pin&&!un;$("pb").style.display=need?"block":"none";$("adm").style.display=need?"none":"block";
- if(need){$("pi").value="";$("pi").focus();return}
- F.forEach(([k])=>$("f_"+k).value=C[k]);rf();$("f_nama").focus()}
+ if(need){$("pi").value="";$("pi").focus();showQR();return}
+ F.forEach(([k])=>$("f_"+k).value=C0[k]);rf();$("sy").textContent=SYN||"Kendali jarak jauh belum aktif (isi ID / link Google Sheet).";$("f_nama").focus()}
 $("pi").onkeydown=e=>{if(e.key=="Enter"){if($("pi").value==C.pin){un=1;sh(1)}else{$("pi").value="";$("pi").placeholder="PIN salah, coba lagi"}}};
 $("bx").onclick=$("bc").onclick=()=>sh(0);
-$("bs").onclick=()=>{F.forEach(([k,,t])=>{const v=$("f_"+k).value;C[k]=(t=="number"||k=="tpl"||k=="lay")?(parseFloat(v)||0):v});
- try{localStorage.setItem("cfg",JSON.stringify(C))}catch(e){}key="";last="";tick();slide();sh(0)};
+$("bs").onclick=()=>{F.forEach(([k,,t])=>{const v=$("f_"+k).value;C0[k]=(typeof D[k]=="number")?(parseFloat(v)||0):v});C={...C0,...REM,...RP};lvOn=-1;
+ try{localStorage.setItem("cfg",JSON.stringify(C0))}catch(e){}key="";last="";tick();slide();sync();sh(0)};
 $("br").onclick=()=>{sim=0;tick()};
 $("bt").onclick=()=>{const s=(()=>{const n=now();return n.getUTCHours()*3600+n.getUTCMinutes()*60+n.getUTCSeconds()})(),nk=MAIN.findIndex(i=>T[i]>s);sim+=(nk<0?T2[1]+86400:T[MAIN[nk]])-10-s;sh(0);init();tick()};
 $("bf").onclick=()=>{init();document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen()};
 document.addEventListener("keydown",e=>{init();if($("set").style.display!="block"){if(e.key=="Enter"||e.key=="s"){e.preventDefault();sh(1)}}else if(e.key=="Escape")sh(0)});
 document.addEventListener("click",e=>{init();if(!e.target.closest("#set")&&!document.fullscreenElement&&document.documentElement.requestFullscreen)document.documentElement.requestFullscreen().catch(()=>{})});
 setInterval(tick,500);tick();loadM().then(slide);
+setInterval(function(){if(typeof Android!="undefined")pollPhone()},3000);
+setTimeout(function L(){sync();setTimeout(L,Math.max(1,+C.sync||5)*6e4)},3000);setTimeout(()=>$("ht").style.display="none",20000);if(/; wv\)/.test(navigator.userAgent))$("ht").style.display="none";
 </script></body></html>

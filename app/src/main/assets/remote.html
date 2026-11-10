@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kendali Jam Adzan</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px system-ui,Roboto,sans-serif;background:#06231d;color:#f5f1e3;padding:12px 12px 130px}
+h1{font-size:20px;color:#e9c46a;margin:4px 0 2px}.s{color:#9ec5b7;font-size:13px;margin-bottom:6px}
+section{background:#0c4a3b66;border-radius:12px;padding:12px;margin:12px 0}h2{font-size:16px;color:#e9c46a;margin:0 0 6px}
+label{display:block;font-size:13px;color:#9ec5b7;margin:10px 0 3px}
+input,select,textarea,button{width:100%;font-size:16px;padding:10px;border-radius:10px;border:1px solid #2c6b5a;background:#06231d;color:#f5f1e3}
+textarea{min-height:110px}button{background:#e9c46a;color:#06231d;font-weight:700;border:0;margin-top:10px}button.g{background:#0c4a3b;color:#f5f1e3;border:1px solid #e9c46a}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#031a15;padding:8px 12px 12px;border-top:1px solid #2c6b5a}
+.it{display:flex;gap:8px;align-items:center;margin:8px 0;font-size:14px}.it img{width:56px;height:38px;object-fit:cover;border-radius:6px;background:#000}
+.it span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.it button{width:auto;margin:0;padding:6px 12px;background:#7a2a2a;color:#fff}
+#msg{font-size:14px;color:#e9c46a;min-height:20px}progress{width:100%;margin-top:8px}
+</style></head><body>
+<h1>Kendali Jam Adzan</h1><div class="s" id="st">Menghubungkan ke TV...</div>
+<div id="f"></div>
+<section><h2>Upload dari HP</h2>
+ <label>Jenis file</label><select id="kd"></select>
+ <label>Pilih file</label><input type="file" id="fi">
+ <button class="g" id="up">Upload ke TV</button><progress id="pg" max="100" value="0" style="display:none"></progress>
+ <h2 style="margin-top:14px">File di TV (dari HP)</h2><div id="ls">-</div></section>
+<section><button class="g" id="cl">Hapus semua perubahan dari HP</button></section>
+<div class="bar"><div id="msg"></div><button id="sv" style="margin-top:4px">Simpan ke TV</button></div>
+<script>
+const T=new URLSearchParams(location.search).get("t")||"",$=i=>document.getElementById(i);
+const n9=a=>a.map((x,i)=>[String(i),x]);
+const LY=n9(["Otomatis","1 Klasik","2 Menu Samping","3 Media Layar Penuh","4 Analog + Khotbah","5 Analog Besar","6 Kartu di Atas","7 Live + Konten (kanan)","8 Live + Konten (3 kolom)"]);
+const TP=n9(["Otomatis harian","1 Zamrud","2 Malam Biru","3 Terang","4 Hitam Emas","5 Ungu Senja","6 Makkah","7 Madinah","8 Haramain Fajar"]);
+const P3=[["1","Pilihan 1"],["2","Pilihan 2"],["3","Pilihan 3"]];
+const NM=["Imsak","Subuh","Terbit","Dhuha","Dzuhur","Ashar","Maghrib","Isya","Isyroq"];
+const G=[
+["Identitas masjid",[["nama","Nama masjid"],["kota","Kota / wilayah"],["almt","Alamat"],["rek","Info rekening infaq"]]],
+["Tampilan",[["lay","Layout dashboard","s",LY],["tpl","Template warna","s",TP]]],
+["Teks & konten",[["run","Teks berjalan"],["hadits","Hadits / nasihat (satu per baris: teks | sumber)","t"],["urls","Link gambar online (opsional, satu per baris)","t"]]],
+["Khotbah Jum'at",[["khb","Khatib"],["khi","Imam"],["khm","Muadzin"],["kht","Tema khutbah"]]],
+["Laporan kas",[["kTgl","Tanggal laporan"],["kSal","Saldo (Rp)"],["kIn","Pemasukan (Rp)"],["kOut","Pengeluaran (Rp)"]]],
+["Waktu sholat",[["ih","Ihtiyati (menit)","n"],["clk","Penyesuaian jam (detik, + atau -)","n"],["hj","Koreksi tanggal Hijriah (hari)","n"],
+ ...NM.map((x,i)=>["k"+i,"Koreksi "+x+" (menit)","n"]),["isy","Isyroq: menit setelah Terbit","n"],["isyd","Layar Isyroq (menit, 0 = mati)","n"]]],
+["Adzan & iqomah",[["snm","Mode suara","s",[["alert","Hanya notifikasi + alert"],["adzan","Putar suara adzan & iqomah"]]],["sa","Adzan aktif","s",P3],["si","Iqomah aktif","s",P3],["tone","Nada alert","s",P3],
+ ["adz","Durasi layar adzan (menit)","n"],["solat","Durasi layar sholat gelap (menit)","n"],["iq0","Iqomah Subuh (menit)","n"],["iq1","Iqomah Dzuhur (menit)","n"],["iq2","Iqomah Ashar (menit)","n"],["iq3","Iqomah Maghrib (menit)","n"],["iq4","Iqomah Isya (menit)","n"]]],
+["Live YouTube",[["live","Live di layout 7 & 8 (1 = ya, 0 = tidak)","n"],["lmute","Bisukan suara live (1 = ya, 0 = tidak)","n"],["chan","ID channel YouTube"]]]];
+const KD=[["media","Gambar / Video konten"],["adzan1","Adzan pilihan 1"],["adzan2","Adzan pilihan 2"],["adzan3","Adzan pilihan 3"],["adzanS","Adzan Subuh"],["iqomah1","Iqomah pilihan 1"],["iqomah2","Iqomah pilihan 2"],["iqomah3","Iqomah pilihan 3"]];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let E={};
+$("f").innerHTML=G.map(g=>"<section><h2>"+g[0]+"</h2>"+g[1].map(f=>{const id="f_"+f[0],t=f[2];
+ return "<label for='"+id+"'>"+f[1]+"</label>"+(t=="s"?"<select id='"+id+"'>"+f[3].map(o=>"<option value='"+o[0]+"'>"+o[1]+"</option>").join("")+"</select>":t=="t"?"<textarea id='"+id+"'></textarea>":"<input id='"+id+"' type='"+(t=="n"?"number":"text")+"' step='any'>")}).join("")+"</section>").join("");
+$("kd").innerHTML=KD.map(k=>"<option value='"+k[0]+"'>"+k[1]+"</option>").join("");
+const acc=()=>{$("fi").accept=$("kd").value=="media"?"image/*,video/*":"audio/*"};$("kd").onchange=acc;acc();
+const api=(p,o)=>fetch(p+(p.indexOf("?")<0?"?":"&")+"t="+encodeURIComponent(T),o).then(r=>{if(r.status==403)throw new Error("403");return r.json()});
+const say=m=>{$("msg").textContent=m};
+function render(s){E=s.eff||{};
+ G.forEach(g=>g[1].forEach(f=>{const e=$("f_"+f[0]);if(document.activeElement!==e)e.value=E[f[0]]==null?"":String(E[f[0]])}));
+ $("st").textContent="Terhubung ke TV • "+Object.keys(s.cfg||{}).length+" pengaturan dari HP aktif";
+ $("ls").innerHTML=(s.media||[]).length?s.media.map(m=>"<div class='it'>"+(m.kind=="media"&&/^image/.test(m.type)?"<img src='/m/"+m.id+"'>":"<img alt=''>")+"<span>"+esc(m.name)+" ("+esc(m.kind)+")</span><button data-d='"+m.id+"'>Hapus</button></div>").join(""):"Belum ada file."}
+function load(){api("/api/state").then(render).catch(e=>{$("st").textContent=e.message=="403"?"Token salah. Scan ulang QR di layar TV.":"Tidak bisa terhubung ke TV. Pastikan HP satu Wi-Fi dengan TV."})}
+$("sv").onclick=()=>{const o={};G.forEach(g=>g[1].forEach(f=>{const v=$("f_"+f[0]).value,old=E[f[0]]==null?"":String(E[f[0]]);if(v!==old)o[f[0]]=v}));
+ if(!Object.keys(o).length){say("Tidak ada perubahan.");return}
+ say("Menyimpan...");api("/api/cfg",{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify(o)}).then(s=>{render(s);say("Tersimpan. TV akan memperbarui dalam beberapa detik.")}).catch(()=>say("Gagal menyimpan."))};
+$("cl").onclick=()=>{if(!confirm("Hapus semua perubahan dari HP? TV kembali ke pengaturannya sendiri."))return;
+ api("/api/cfg",{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({__clear:1})}).then(s=>{render(s);say("Perubahan dari HP dihapus.")}).catch(()=>say("Gagal."))};
+$("ls").onclick=e=>{const d=e.target.getAttribute&&e.target.getAttribute("data-d");if(!d)return;api("/api/del?id="+encodeURIComponent(d)).then(render).catch(()=>say("Gagal menghapus."))};
+$("up").onclick=()=>{const f=$("fi").files[0];if(!f){say("Pilih file dulu.");return}
+ const x=new XMLHttpRequest(),pg=$("pg");pg.style.display="block";pg.value=0;
+ x.open("POST","/api/up?t="+encodeURIComponent(T)+"&kind="+encodeURIComponent($("kd").value)+"&name="+encodeURIComponent(f.name)+"&type="+encodeURIComponent(f.type||"application/octet-stream"));
+ x.upload.onprogress=e=>{if(e.lengthComputable)pg.value=e.loaded*100/e.total};
+ x.onload=()=>{pg.style.display="none";if(x.status==200){try{render(JSON.parse(x.responseText))}catch(e){}$("fi").value="";say("File terupload ke TV.")}else say("Upload gagal.")};
+ x.onerror=()=>{pg.style.display="none";say("Upload gagal. Cek koneksi Wi-Fi.")};
+ say("Mengupload "+f.name+"...");x.send(f)};
+load();setInterval(()=>{if(!document.hidden)api("/api/state").then(s=>{if(!document.activeElement||!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName))render(s)}).catch(()=>{})},15000);
+</script></body></html>
